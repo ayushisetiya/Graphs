@@ -1,0 +1,27 @@
+ /*** dfs of graph gfg
+ private:
+    void dfs(int node,vector<int>adj[],vector<int>& ls,int visited[])
+    {visited[node]=1;
+    ls.push_back(node);
+    for(auto it:adj[node])
+    {
+        if(visited[it]!=1)
+        dfs(it,adj,ls,visited);
+    }
+        
+    }
+  public:
+    // Function to return a list containing the DFS traversal of the graph.
+    vector<int> dfsOfGraph(int V, vector<int> adj[]) {
+        // Code here
+        vector<int>ls;
+        int visited[V]={0};
+        visited[0]=1;
+        int start=0;
+      
+        dfs(start,adj,ls,visited);
+        return ls;
+        
+        
+    }
+    **/
